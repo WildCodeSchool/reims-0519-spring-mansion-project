@@ -1,0 +1,43 @@
+body {
+    background: url(entree-manoir.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: Architects Daughter;
+    text-align: center;
+    color: black;
+
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 300%;
+    font-weight: bold;
+    background-color: rgb(190, 190, 160, 0.9);
+    padding: 1% 1% 1% 1%;
+}
+
+.history {
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+    justify-content: space-around;
+    font-size: 150%;
+    color: black;
+
+}
+
+#text {
+    background-color: rgb(190, 190, 160, 0.9);
+    border-radius: 10px;
+    padding: 1% 1% 1% 1%;
+    
+}
+
+.enter {
+    display: flex;
+    align-items: flex-end;
+    height: 30%;
+    justify-content: space-around;
+}
