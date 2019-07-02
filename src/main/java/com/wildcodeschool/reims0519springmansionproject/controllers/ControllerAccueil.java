@@ -1,15 +1,16 @@
 package com.wildcodeschool.reims0519springmansionproject.controllers;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-@RestController
+@Controller
 public class ControllerAccueil {
 
-@GetMapping("/")
-public String getAccueil() {
-    return null;
-}
+    @GetMapping("/")
+    public String getAccueil() {
+        return "homepage";
+    }
+
 
 }
