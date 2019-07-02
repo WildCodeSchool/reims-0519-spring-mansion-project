@@ -1,15 +1,6 @@
 class Characters{
     private String name;
     private String dialogue;
-    
-    public String Watson(String name, String dialogue){
-        this.name = name;
-        this.dialogue = dialogue;
-
-        // Insérer, si on est dans le Hall, Watson dit //
-
-        return "Ecrire indice";
-    }
 
 	public String getName() {
 		return name;
