@@ -8,7 +8,7 @@ public class ControllerEnd{
  
     @GetMapping("/game/end")
     public String getEnd(){
-        return "endpage.html";
+        return "endpage";
     }
 
 }
