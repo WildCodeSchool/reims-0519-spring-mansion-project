@@ -1,6 +1,6 @@
 package main.java.com.wildcodeschool.reims0519springmansionproject.entities;
 
-public class Objects {
+public class Object {
     private String name;
     private boolean useful;
 
