@@ -2,7 +2,7 @@ package com.wildcodeschool.reims0519springmansionproject.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ControllerGame {
@@ -12,8 +12,8 @@ public class ControllerGame {
         return "";
     }
 
-    @GetMapping("/game/{id}")
-    public Room getRoom(@PathVariable int id, Player player) {
-        return player.getMansion().get(id);
+    @PostMapping("/game")
+    public String postRoom() {
+        return "";
     }
 }
