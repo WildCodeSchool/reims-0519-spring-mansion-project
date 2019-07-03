@@ -20,7 +20,7 @@ public class Object {
 		this.useful = useful;
 	}
 
-    public Objects(String name, boolean useful) {
+    public Object(String name, boolean useful) {
         this.name = name;
         this.useful = useful;
     }
