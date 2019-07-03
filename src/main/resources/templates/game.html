@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Game</title>
-    <link rel="stylesheet" href="game.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Game</title>
+        <link rel="stylesheet" href="game.css">
+    </head>
 
-<body>
-    <header>
-
-    </header>
-
-
-
-
-
-
-</body>
-
-
+    <body>
+        <header>
+        </header>
+        <ul>
+            <li th:each="room : ${rooms}">
+                <form action="/game" method="post">
+                    <button name="btn" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
+                </form> 
+            </li>
+        </ul>
+    </body>
 </html>
