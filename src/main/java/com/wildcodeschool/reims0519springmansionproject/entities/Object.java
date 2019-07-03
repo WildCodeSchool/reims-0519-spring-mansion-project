@@ -1,4 +1,4 @@
-package main.java.com.wildcodeschool.reims0519springmansionproject.entities;
+package com.wildcodeschool.reims0519springmansionproject.entities;
 
 public class Object {
     private String name;
