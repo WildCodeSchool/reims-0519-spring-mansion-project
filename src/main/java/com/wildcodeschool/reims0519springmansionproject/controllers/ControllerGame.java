@@ -7,21 +7,17 @@ import com.wildcodeschool.reims0519springmansionproject.repositories.RoomReposit
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ControllerGame {
 
     private static RoomRepository mansion = new RoomRepository();
 
-    @GetMapping("/game")
-    public String getRoomZero() {
-        return "redirect:/game/0";
-    }
-
-    @GetMapping("/game/{id}")
-    public String getRoom(Model model, @PathVariable int id) {
+    
+    @PostMapping("/game")
+    public String postRoom(Model model, @RequestParam("btn") Integer id) {
         ArrayList<Room> myList = new ArrayList<Room>();
         for (Integer roomId : mansion.getRoomById(id).getAdjacentRooms()) {
             Room room = mansion.getRoomById(roomId);
