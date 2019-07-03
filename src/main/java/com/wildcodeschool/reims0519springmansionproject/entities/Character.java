@@ -18,7 +18,7 @@ class Character{
 		this.dialog = dialog;
 	}
 
-	public Characters(String name, String dialog) {
+	public Character(String name, String dialog) {
 		this.name = name;
 		this.dialog = dialog;
 	}
