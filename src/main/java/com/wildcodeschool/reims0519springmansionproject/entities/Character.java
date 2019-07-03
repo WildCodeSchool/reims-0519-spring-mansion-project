@@ -1,4 +1,6 @@
-class Character{
+package com.wildcodeschool.reims0519springmansionproject.entities;
+
+class Character {
     private String name;
     private String dialog;
 
