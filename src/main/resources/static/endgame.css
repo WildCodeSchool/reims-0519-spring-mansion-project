@@ -2,7 +2,7 @@ body {
     background: url(library.jpg) no-repeat center fixed;
     background-size: cover;
     height: 100vh;
-    font-family: "";
+
     text-align: center;
     color: black;
 }
@@ -14,16 +14,18 @@ body {
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 150%;
+    font-size: 250%;
+    font-family: 'Great Vibes', cursive;
 
 
 }
 
 .lead {
     color: white;
-    font-size: 300%;
+    font-size: 500%;
     height: 20%;
-    margin-top: 5%;
+    margin-top: 12%;
+    font-family: 'Great Vibes', cursive;
 }
 
 .table {
@@ -31,4 +33,6 @@ body {
     background-color: rgb(190, 190, 160, 0.7);
     width: 80%;
     margin: auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 150%;
 }
