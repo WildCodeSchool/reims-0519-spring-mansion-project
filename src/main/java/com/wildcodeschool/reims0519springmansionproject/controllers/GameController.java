@@ -18,7 +18,7 @@ public class GameController {
 
     @GetMapping("/game")
     public String getRoom(){
-        return "redirect:/homepage";
+        return "redirect:/";
     }
 
     @PostMapping("/game")
