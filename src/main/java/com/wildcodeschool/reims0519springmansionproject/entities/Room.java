@@ -8,7 +8,7 @@ public class Room {
     private int roomHeight;
     private int roomWidth;
     private boolean locked = false;
-    private ArrayList<String> adjacentRooms;
+    private ArrayList<Integer> adjacentRooms;
 
     public int getId() {
         return id;
@@ -50,15 +50,18 @@ public class Room {
         this.locked = locked;
     }
 
-    public ArrayList<String> getAdjacentRooms() {
+    public ArrayList<Integer> getAdjacentRooms() {
         return adjacentRooms;
     }
 
-    public void setAdjacentRooms(ArrayList<String> adjacentRooms) {
+    public void setAdjacentRooms(ArrayList<Integer> adjacentRooms) {
         this.adjacentRooms = adjacentRooms;
     }
 
-    public Room(int id, String name, int roomHeight, int roomWidth, ArrayList<String> adjacentRooms) {
+    public Room() {
+
+    }
+    public Room(int id, String name, int roomHeight, int roomWidth, ArrayList<Integer> adjacentRooms) {
         this.id = id;
         this.name = name;
         this.roomHeight = roomHeight;
