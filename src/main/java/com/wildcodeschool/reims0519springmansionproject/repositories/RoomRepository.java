@@ -27,13 +27,4 @@ public class RoomRepository {
         }
         return null;
     }
-
-    public Room getRoomByName(String name) {
-        for(Room room : myRooms) {
-            if(room.getName().equals(name)) {
-                return room;
-            }
-        }
-        return null;
-    }
 }
