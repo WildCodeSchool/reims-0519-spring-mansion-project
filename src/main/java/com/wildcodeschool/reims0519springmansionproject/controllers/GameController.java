@@ -7,15 +7,20 @@ import com.wildcodeschool.reims0519springmansionproject.repositories.RoomReposit
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ControllerGame {
+public class GameController {
 
     private static RoomRepository mansion = new RoomRepository();
 
-    
+    @GetMapping("/game")
+    public String getRoom(){
+        return "redirect:/homepage";
+    }
+
     @PostMapping("/game")
     public String postRoom(Model model, @RequestParam("btn") Integer id) {
         ArrayList<Room> myList = new ArrayList<Room>();
@@ -24,6 +29,6 @@ public class ControllerGame {
             myList.add(room);
         }
         model.addAttribute("rooms", myList);
-        return "gamepage";
+        return "game";
     }
 }
