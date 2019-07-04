@@ -1,7 +1,17 @@
 body{
-    background-color: sandybrown;
+    background-color:#F3E1BD;
+    margin-top: 30px;
 }
 .col-4{
-    background-color: blue;
     height: 50%;
+}
+.card{
+    text-align: inherit;
+}
+.btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+img{
+    max-width:100%;
 }

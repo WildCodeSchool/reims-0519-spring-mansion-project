@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+  
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" href="game.css">
 </head>
@@ -12,23 +13,15 @@
   <div class="row">
     <div class="col-4">
       <div class="card">
-      <div class="card-body">
-          Actions available :
-          <ul>
-                <li th:each="room : ${rooms}">
-                    <form action="/game" method="post">
-                        <button name="btn" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
-                    </form> 
-                </li>
-            </ul>
+      <div class="card-body">Text where we can see what is happening.<div style= "height: 435px;"></div>
+     
       </div>
       </div>
     </div>
 
       <div class="col-8">
         <div class="card">
-        <div class="card-body">
-        Main display.
+        <div class="card-body"><img src="hall.jpg">
         </div>
         </div>
       </div>
@@ -36,7 +29,7 @@
 
   <div class="row">
     <div class="col-4">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Launch demo modal</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
 
       <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable" role="document">
