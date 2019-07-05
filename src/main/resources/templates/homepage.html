@@ -8,7 +8,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="../static/homepage.css">
+        <link rel="stylesheet" th:href="@{/homepage.css}" href="../static/homepage.css">
         <title>Mansion Project</title>
     </head>
     <body>
@@ -20,6 +20,8 @@
         </div>
         <footer class="enter"></div>
             <form action="/game" method="POST">
+                <label for ="nickname">Enter your name :</label>
+                <INPUT TYPE=TEXT NAME="nickname" id = "nickname" MAXLENGTH=50 SIZE=18 >
                 <button name="btn" value="0" type="submit" class="btn btn-secondary btn-lg">Enter Game</button>
             </form>
         </footer>

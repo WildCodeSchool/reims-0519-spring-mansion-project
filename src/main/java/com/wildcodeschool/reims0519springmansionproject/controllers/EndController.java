@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @ResponseBody
 
-public class ControllerEnd{
+public class EndController{
     private final static String DB_URL = "jdbc:mysql://localhost:3306/mansion_project?serverTimezone=GMT";
     private final static String DB_USER = "javaclues";
     private final static String DB_PASSWORD = "Wcsmansion2019!";
@@ -57,35 +57,5 @@ public class ControllerEnd{
 }
     
     }
-        class Score {
-
-            private int id;
-            private String name;
-            private int time;
-            private int score;
-    
-            public Score(int id, String name, int time, int score) {
-                this.id = id;
-                this.name = name;
-                this.time = time;
-                this.score = score;
-            }
-    
-            public int getId() {
-                return id;
-            }
-    
-            public String getName() {
-                return name;
-            }
-    
-            public int getTime() {
-                return time;
-            }
-    
-            public int getScore() {
-                return score;
-            }
-    }
-        
+      
     }
