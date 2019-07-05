@@ -36,8 +36,7 @@ public class ScoreRepository {
                     int id = resultSet.getInt("id");
                     String name = resultSet.getString("name");
                     long time = resultSet.getLong("time");
-                    String timeString = Score.formatTime(time);
-                    scores.add(new Score(id, name, timeString));
+                    scores.add(new Score(id, name, time));
                 }
                 return scores;
             }
@@ -106,8 +105,7 @@ public class ScoreRepository {
                 if (resultSet.next()) {
                     String name = resultSet.getString("name");
                     long time = resultSet.getLong("time");
-                    String timeString = Score.formatTime(time);
-                    return new Score(id, name, timeString);
+                    return new Score(id, name, time);
                 }
                 else {
                     throw new ResponseStatusException(

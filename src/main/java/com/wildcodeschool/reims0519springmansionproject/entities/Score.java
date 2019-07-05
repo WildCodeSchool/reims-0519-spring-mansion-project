@@ -4,20 +4,23 @@ public class Score {
     private int id;
     private String name;
     private long initialTime;
-    private String timeString;
 
     public Score(){
         this.initialTime = System.currentTimeMillis();
     }
 
-    public Score(int id, String name, String timeString) {
+    public Score(int id, String name, long initialTime) {
         this.id = id;
         this.name = name;
-        this.timeString = timeString;
+        this.initialTime = initialTime;
     }
     
     public long getEllapsedTime() {
         return System.currentTimeMillis() - initialTime;
+    }
+
+    public long getInitialTime() {
+        return this.initialTime;
     }
 
     public void setInitialTime(long time) {
@@ -38,14 +41,6 @@ public class Score {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getTimeString() {
-        return timeString;
-    }
-
-    public void setTimeString(String timeString) {
-        this.timeString = timeString;
     }
 
     public static String formatTime(long time) {
