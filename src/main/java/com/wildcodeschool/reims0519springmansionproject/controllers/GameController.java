@@ -37,7 +37,6 @@ public class GameController {
         else {
             ArrayList<Room> myList = new ArrayList<Room>();
             ArrayList<Object> myObjects = game.getObjects().getMyObjects();
-            //if (myObjects.get(0))
             for (Integer roomId : game.getMansion().getRoomById(id).getAdjacentRooms()) {
                 Room room = game.getMansion().getRoomById(roomId);
                 if (room.isLocked()) {
