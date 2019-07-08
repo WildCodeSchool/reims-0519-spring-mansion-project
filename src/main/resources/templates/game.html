@@ -8,12 +8,14 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <div style= "height: 435px;">
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="card" >
+        <div class="card-body">
+          <h1 th:text="${roomName}">Room</h1>
+          <div style= "height: 435px;">
               <ul>
                 <li th:each="room : ${rooms}">
                   <form action="/game" method="post">
