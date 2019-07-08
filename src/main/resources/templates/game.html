@@ -26,7 +26,7 @@
             <form th:if="${end_message == 'End game'}" action="/end" method="post">
               <button th:if="${end_message == 'End game'}" name="end" type="submit" th:text="${end_message}"></button>
             </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#map">Mansion map</button>
             <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
