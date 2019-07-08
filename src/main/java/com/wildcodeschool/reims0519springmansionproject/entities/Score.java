@@ -44,6 +44,7 @@ public class Score {
     }
 
     public static String formatTime(long time) {
+        time /= 1000;
         long seconds = (time % 60);
         long minutes = (time % 3600)/60;
         long hours = (time / 3600);
