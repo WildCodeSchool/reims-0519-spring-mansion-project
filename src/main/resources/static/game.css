@@ -15,3 +15,25 @@ body{
 img{
     max-width:100%;
 }
+.room {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+}
+.room-title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.room-map-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.room-list {
+    border-radius: 5px;
+    background-color: white;
+    padding: 2em;
+}
+.room-img {
+    border-radius: 5px;
+}
