@@ -9,7 +9,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <link rel="stylesheet" th:href="@{/homepage.css}" href="../static/homepage.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
         <title>Mansion Project</title>
+
     </head>
     <body>
         <header class="title">Welcome to the Mansion Project</header>
@@ -23,6 +28,9 @@
                 <label for ="nickname">Enter your name :</label>
                 <INPUT TYPE=TEXT NAME="nickname" id = "nickname" MAXLENGTH=50 SIZE=18 >
                 <button name="btn" value="0" type="submit" class="btn btn-secondary btn-lg">Enter Game</button>
+            </form>
+            <form action="/endgame" method="GET">
+                <button name="btn" value="0" type="submit" class="btn btn-secondary btn-lg">Leaderboards</button>
             </form>
         </footer>
 
