@@ -12,8 +12,9 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <div class="card">
-        <div class="card-body">Text where we can see what is happening.
+      <div class="card" >
+        <div class="card-body">
+          <h1 th:text="${roomName}">Room</h1>
           <div style= "height: 435px;">
               <ul>
                 <li th:each="room : ${rooms}">
