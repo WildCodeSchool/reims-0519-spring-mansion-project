@@ -41,7 +41,7 @@ public class GameController {
                 model.addAttribute("rooms", myList);
             }
         }
-        model.addAttribute("roomImage", game.getMansion().getRoomById(id).getName());
+        model.addAttribute("roomImage", game.getMansion().getRoomById(id).getName().toLowerCase());
         return "game";
     }
 }
