@@ -25,7 +25,28 @@
             </div>
             <form th:if="${end_message == 'End game'}" action="/end" method="post">
               <button th:if="${end_message == 'End game'}" name="end" type="submit" th:text="${end_message}"></button>
-            </form> 
+            </form>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
+            <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="map">Mansion Map</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="wrapper">
+                      <div class="item item1">Library</div>
+                      <div class="item item2">Kitchen</div>
+                      <div class="item item3">Salon</div>
+                      <div class="item item4">Hall</div>
+                      <div class="item item5">Reception</div>
+                      <div class="item item6">Office</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
           </div>
         </div>
       </div>
@@ -39,31 +60,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-4">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
-      <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="map">Mansion Map</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="wrapper">
-                <div class="item item1">Library</div>
-                <div class="item item2">Kitchen</div>
-                <div class="item item3">Salon</div>
-                <div class="item item4">Hall</div>
-                <div class="item item5">Reception</div>
-                <div class="item item6">Office</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+      
+
 
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
