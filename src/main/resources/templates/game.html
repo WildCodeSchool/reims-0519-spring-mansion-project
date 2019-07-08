@@ -21,6 +21,7 @@
                   </form> 
                 </li>
               </ul>
+              <p th:if="${locked != null}" th:text="${locked}"></p>
             </div>
             <form th:if="${end_message == 'End game'}" action="/end" method="post">
               <button th:if="${end_message == 'End game'}" name="end" type="submit" th:text="${end_message}"></button>
