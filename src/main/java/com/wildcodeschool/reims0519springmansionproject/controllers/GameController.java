@@ -3,6 +3,7 @@ package com.wildcodeschool.reims0519springmansionproject.controllers;
 import java.util.ArrayList;
 
 import com.wildcodeschool.reims0519springmansionproject.entities.Game;
+import com.wildcodeschool.reims0519springmansionproject.entities.Object;
 import com.wildcodeschool.reims0519springmansionproject.entities.Room;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,14 +36,20 @@ public class GameController {
         }
         else {
             ArrayList<Room> myList = new ArrayList<Room>();
+            ArrayList<Object> myObjects = game.getObjects().getMyObjects();
+            //if (myObjects.get(0))
             for (Integer roomId : game.getMansion().getRoomById(id).getAdjacentRooms()) {
                 Room room = game.getMansion().getRoomById(roomId);
-                if (!room.isLocked()) {
-                    myList.add(room);
-                }
-                else {
+                if (room.isLocked()) {
                     model.addAttribute("locked", room.getName() + " is locked ! Find the key !");
+                    if (!myObjects.isEmpty()) {
+                        if (myObjects.get(0).getRoomAssociated() == roomId) {
+                            model.addAttribute("unlock", "Unlock "+room.getName());
+                            model.addAttribute("currentRoomId", id);
+                        }
+                    }
                 }
+                myList.add(room); 
                 model.addAttribute("rooms", myList);
             }
         }
