@@ -15,22 +15,19 @@
     </head>
     <body>
 
-        <header class="congrats">Congratulations ! You have found the murderer !</header>
+        <header class="congrats" th:if="${title != null}" th:text="${title}">Congratulations ! You have found the murderer !</header>
 
         <h1 class="lead">Leaderboards</h1>
 
         <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>Player</th>
                     <th>Time</th>
-                    <th>Points</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="score : ${scores}">
-                    <td th:text="${score.id}">1</td>
                     <td th:text="${score.name}">AAA</td>
                     <td th:text="${score.formatTime(score.getInitialTime())}">00h 00m 01s</td>
                 </tr>
