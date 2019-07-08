@@ -1,8 +1,7 @@
 body {
-    background: url(entree-manoir.jpg) no-repeat center fixed;
+    background: url(façade2.jpg) no-repeat center fixed;
     background-size: cover;
     height: 100vh;
-    font-family: Architects Daughter;
     text-align: center;
     color: black;
 
@@ -12,8 +11,8 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
-    font-size: 300%;
-    font-weight: bold;
+    font-size: 400%;
+    font-family: 'Great Vibes', cursive;
     background-color: rgb(190, 190, 160, 0.9);
     padding: 1% 1% 1% 1%;
 }
@@ -21,9 +20,10 @@ body {
 .history {
     display: flex;
     align-items: flex-end;
-    height: 50%;
+    height: 45%;
     justify-content: space-around;
-    font-size: 150%;
+    font-size: 200%;
+    font-family: 'Open Sans Condensed', sans-serif;
     color: black;
 
 }
@@ -32,12 +32,17 @@ body {
     background-color: rgb(190, 190, 160, 0.9);
     border-radius: 10px;
     padding: 1% 1% 1% 1%;
-    
 }
 
 .enter {
     display: flex;
     align-items: flex-end;
-    height: 30%;
-    justify-content: space-around;
+    height: 25%;
+    justify-content: space-evenly;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 150%;
 }
