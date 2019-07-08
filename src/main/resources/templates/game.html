@@ -8,14 +8,13 @@
 </head>
 
 <body>
-
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <div class="card" >
-        <div class="card-body">
-          <h1 th:text="${roomName}">Room</h1>
-          <div style= "height: 435px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="card" >
+          <div class="card-body">
+            <h1 th:text="${roomName}">Room</h1>
+            <div style= "height: 435px;">
               <ul>
                 <li th:each="room : ${rooms}">
                   <form action="/game" method="post">
@@ -30,36 +29,34 @@
           </div>
         </div>
       </div>
-
       <div class="col-8">
         <div class="card">
-            <div class="card-body">
-              <img src="../static/hall.jpg" th:src="@{${'/' + roomImage + '.jpg'}}">
-            </div>
+          <div class="card-body">
+            <img src="../static/hall.jpg" th:src="@{${'/' + roomImage + '.jpg'}}">
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-4">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
-        <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="map">Mansion Map</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <div class="wrapper">
-                  <div class="item1">Library</div>
-                  <div class="item2">Kitchen</div>
-                  <div class="item3">Dinning Room</div>
-                  <div class="item4">Hall</div>
-                  <div class="item5">Reception</div>
-                  <div class="item6">Office</div>
-                </div>
+  <div class="row">
+    <div class="col-4">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#map">Mansion map</button>
+      <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="map">Mansion Map</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="wrapper">
+                <div class="item item1">Library</div>
+                <div class="item item2">Kitchen</div>
+                <div class="item item3">Salon</div>
+                <div class="item item4">Hall</div>
+                <div class="item item5">Reception</div>
+                <div class="item item6">Office</div>
               </div>
             </div>
           </div>
@@ -67,6 +64,7 @@
       </div>
     </div>
   </div>
+
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
