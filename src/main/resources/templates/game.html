@@ -8,12 +8,14 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            <div style= "height: 435px;">
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="card" >
+        <div class="card-body">
+          <h1 th:text="${roomName}">Room</h1>
+          <div style= "height: 435px;">
               <ul>
                 <li th:each="room : ${rooms}">
                   <form action="/game" method="post">
@@ -21,6 +23,7 @@
                   </form> 
                 </li>
               </ul>
+              <p th:if="${locked != null}" th:text="${locked}"></p>
             </div>
             <form th:if="${end_message == 'End game'}" action="/end" method="post">
               <button th:if="${end_message == 'End game'}" name="end" type="submit" th:text="${end_message}"></button>

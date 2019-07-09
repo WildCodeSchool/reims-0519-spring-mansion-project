@@ -2,7 +2,6 @@ body {
     background: url(library.jpg) no-repeat center fixed;
     background-size: cover;
     height: 100vh;
-
     text-align: center;
     color: black;
 }
@@ -10,28 +9,24 @@ body {
 .congrats {
     background-color: rgb(190, 190, 160, 0.9);
     padding: 1% 1% 1% 1%;
-    width: 65%;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin: auto;
     font-size: 250%;
     font-family: 'Great Vibes', cursive;
-
-
 }
 
 .lead {
     color: white;
     font-size: 500%;
-    height: 20%;
-    margin-top: 12%;
+    height: 25%;
+    margin-top: 5%;
     font-family: 'Great Vibes', cursive;
 }
 
 .table {
     border: 1px solid white;
     background-color: rgb(190, 190, 160, 0.7);
-    width: 80%;
+    width: 50%;
     margin: auto;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 150%;
