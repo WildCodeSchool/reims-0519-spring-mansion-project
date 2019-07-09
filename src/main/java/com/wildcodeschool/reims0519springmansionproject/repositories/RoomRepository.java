@@ -17,7 +17,7 @@ public class RoomRepository {
         myRooms.add(new Room(4, "Reception", 22, 11, new ArrayList<Integer>(Arrays.asList(1, 6))));
         myRooms.add(new Room(5, "Library", 11, 22, new ArrayList<Integer>(Arrays.asList(1, 2))));
         myRooms.add(new Room(6, "Kitchen", 11, 11, new ArrayList<Integer>(Arrays.asList(4))));
-        myRooms.get(5).setLocked(true);
+        myRooms.get(6).setLocked(true);
     }
 
     public Room getRoomById(int id) {
