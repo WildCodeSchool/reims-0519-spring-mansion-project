@@ -14,9 +14,10 @@
       <ul class="room-list">
         <li th:each="room : ${rooms}">
           <form action="/game" method="post">
-            <button name="id" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
+            <button th:if="${room.locked == false}" name="id" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
           </form> 
         </li>
+        <li th:if="${locked != null}" th:text="${locked}">Locked</li>
       </ul>
       <img class="room-img" src="../static/hall.jpg" th:src="@{${'/' + currentRoom.name.toLowerCase() + '.jpg'}}">
       <button type="button" class="btn btn-dark room-map-button" data-toggle="modal" data-target="#map">Mansion map</button>
