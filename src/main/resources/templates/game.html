@@ -5,6 +5,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" th:href="@{/game.css}" href="../static/game.css">
    <link rel="stylesheet" th:href="@{/mapgrid.css}" href="../static/mapgrid.css">
+   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -14,9 +15,10 @@
       <ul class="room-list">
         <li th:each="room : ${rooms}">
           <form action="/game" method="post">
-            <button name="id" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
+            <button th:if="${room.locked == false}" name="id" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
           </form> 
         </li>
+        <li th:if="${locked != null}" th:text="${locked}">Locked</li>
       </ul>
       <img class="room-img" src="../static/hall.jpg" th:src="@{${'/' + currentRoom.name.toLowerCase() + '.jpg'}}">
       <button type="button" class="btn btn-dark room-map-button" data-toggle="modal" data-target="#map">Mansion map</button>

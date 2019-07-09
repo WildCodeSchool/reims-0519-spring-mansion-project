@@ -8,7 +8,6 @@ import com.wildcodeschool.reims0519springmansionproject.entities.Room;
 
 public class RoomRepository {
     private ArrayList<Room> myRooms;
-
     public RoomRepository() {
         myRooms = new ArrayList<Room>();
         myRooms.add(new Room(0, "Yard", 11, 11, new ArrayList<Integer>(Arrays.asList(1))));
@@ -20,8 +19,6 @@ public class RoomRepository {
         myRooms.add(new Room(6, "Kitchen", 11, 11, new ArrayList<Integer>(Arrays.asList(4))));
         myRooms.get(5).setLocked(true);
     }
-
-
 
     public Room getRoomById(int id) {
         for(Room room : myRooms) {
