@@ -1,92 +1,40 @@
 .wrapper {
-    justify-content: center;
-    align-items: stretch;
     display: grid;
     grid-gap: 3px;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: repeat(3, 30vmin);
+    grid-template-rows: repeat(3, 30vmin);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 5vmin;
+    position: relative;
+    grid-template-areas:
+        "_1 _1 _2"
+        "_3 _4 _5"
+        "_6 _4 _5"
+    ;
 }
-
+.item {
+    border-radius: 2px;
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
 .item1 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    display: flex;
-    border: 3px solid black;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: _1;
 }
-
 .item2 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-area: _2;
 }
-
 .item3 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-area: _3;
 }
-
 .item4 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    grid-area: _4;
 }
-
 .item5 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    grid-area: _5;
 }
-
 .item6 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 50px;
-    border-radius: 2px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: burlywood;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-area: _6;
 }

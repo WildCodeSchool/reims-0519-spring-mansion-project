@@ -10,6 +10,7 @@ import com.wildcodeschool.reims0519springmansionproject.repositories.ScoreReposi
 
 @Controller
 public class EndController{
+
     @GetMapping("/end")
     public String getEnd(Model model){
         model.addAttribute("scores", ScoreRepository.selectAll());
@@ -23,6 +24,7 @@ public class EndController{
             Game.getGame().getPlayer().getScore().getEllapsedTime()
         );
         model.addAttribute("scores", ScoreRepository.selectAll());
+        model.addAttribute("title", "Congratulations ! You have found the murderer !");
         return "endgame";
     }
 }
