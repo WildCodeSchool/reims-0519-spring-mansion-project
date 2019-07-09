@@ -7,6 +7,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" th:href="@{/paper.css}" href="../static/paper.css">
         <link rel="stylesheet" th:href="@{/endgame.css}" href="../static/endgame.css">
         <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet"> 
@@ -18,21 +19,25 @@
         <header class="congrats" th:if="${title != null}" th:text="${title}">Congratulations ! You have found the murderer !</header>
 
         <h1 class="lead">Leaderboards</h1>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Player</th>
-                    <th>Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="score : ${scores}">
-                    <td th:text="${score.name}">AAA</td>
-                    <td th:text="${score.formatTime(score.getInitialTime())}">00h 00m 01s</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="container">
+            <table class="table table-fixed paper">
+                <thead>
+                    <tr>
+                        <th class="col-6">Player</th>
+                        <th class="col-6">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="score : ${scores}">
+                        <td class="col-6" th:text="${score.name}">AAA</td>
+                        <td class="col-6" th:text="${score.formatTime(score.getInitialTime())}">00h 00m 01s</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer class="home"></div>
+            <a href="/" class="btn btn-secondary btn-lg">Home</a>
+        </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

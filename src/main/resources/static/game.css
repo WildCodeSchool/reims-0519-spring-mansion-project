@@ -4,6 +4,7 @@ body{
 body::before{
     content: "";
     background-image: url(background.jpg);
+    filter: grayscale(50%);
     opacity: 0.8;
     position: absolute;
     top: 0;
@@ -46,11 +47,6 @@ img{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-.room-list {
-    border-radius: 5px;
-    background-color: white;
-    padding: 2em;
-}
 .room-img {
     border-radius: 5px;
 
@@ -66,5 +62,6 @@ button{
     background-color: grey;
 }
 button:hover{
-    background-color: burlywood;
+    background-color:burlywood;
+    color: black;
 }
