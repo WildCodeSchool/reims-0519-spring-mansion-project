@@ -20,8 +20,7 @@
                 <li th:each="room : ${rooms}">
                   <form action="/game" method="post">
                     <button th:if="${room.locked == false}" name="btn" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
-                    <button th:if="${unlock != null}" name="btn" value="0" type="submit" th:value="${currentRoomId}" th:text="${unlock}">Bouton unlock</button>
-                    <p th:if="${locked != null && unlock == null}" th:text="${locked}">Text locked</p>
+                    <p th:if="${locked != null}" th:text="${locked}">Text locked</p>
                   </form> 
                 </li>
               </ul>
