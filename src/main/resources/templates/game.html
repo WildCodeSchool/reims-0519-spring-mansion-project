@@ -23,7 +23,9 @@
       <img class="room-img" src="../static/hall.jpg" th:src="@{${'/' + currentRoom.name.toLowerCase() + '.jpg'}}">
       <button type="button" class="btn btn-dark room-map-button" data-toggle="modal" data-target="#map">Mansion map</button>
       <form th:if="${end_message == 'End game'}" action="/end" method="post">
-        <button th:if="${end_message == 'End game'}" name="end" type="submit" th:text="${end_message}"></button>
+        <label for="username">Enter your name</label><br>
+        <input type=text name="username">
+        <button name="end" type="submit" th:text="${end_message}"></button>
       </form>
       <div class="modal fade" id="map" tabindex="-1" role="dialog" aria-labelledby="map" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
