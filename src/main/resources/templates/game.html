@@ -18,6 +18,7 @@
           </form> 
         </li>
         <li th:if="${locked != null}" th:text="${locked}">Text locked</li>
+        <li th:if="${key != null}" th:text="${key}">Key</li>
       </ul>
       <img class="room-img" src="../static/hall.jpg" th:src="@{${'/' + currentRoom.name.toLowerCase() + '.jpg'}}">
       <button type="button" class="btn btn-dark room-map-button" data-toggle="modal" data-target="#map">Mansion map</button>
