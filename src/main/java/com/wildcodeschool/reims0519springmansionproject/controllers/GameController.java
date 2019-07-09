@@ -37,16 +37,16 @@ public class GameController {
         else {
             ArrayList<Room> myList = new ArrayList<Room>();
             ArrayList<Object> myObjects = game.getObjects().getMyObjects();
+            if (!myObjects.isEmpty()) {
+                if (id == myObjects.get(0).getIdLocation() && game.getMansion().getRoomById(myObjects.get(0).getRoomAssociated()).isLocked()) {
+                    model.addAttribute("key", "You found the key !");
+                    game.getMansion().getRoomById(myObjects.get(0).getRoomAssociated()).setLocked(false);
+                }
+            }
             for (Integer roomId : game.getMansion().getRoomById(id).getAdjacentRooms()) {
                 Room room = game.getMansion().getRoomById(roomId);
                 if (room.isLocked()) {
                     model.addAttribute("locked", room.getName() + " is locked ! Find the key !");
-                    if (!myObjects.isEmpty()) {
-                        if (myObjects.get(0).getRoomAssociated() == roomId) {
-                            model.addAttribute("unlock", "Unlock "+room.getName());
-                            model.addAttribute("currentRoomId", id);
-                        }
-                    }
                 }
                 myList.add(room); 
                 model.addAttribute("rooms", myList);
