@@ -10,7 +10,7 @@ public class ObjectRepository {
 
     public ObjectRepository() {
         myObjects = new ArrayList<Object>();
-        myObjects.add(new Object("Rusty key", 6, 5));
+        myObjects.add(new Object("Rusty key", 5, 6));
     }
 
     public ArrayList<Object> getMyObjects() {
