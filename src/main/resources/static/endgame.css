@@ -1,7 +1,7 @@
 body {
     background: url(library.jpg) no-repeat center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     color: black;
 }
@@ -19,15 +19,49 @@ body {
     color: white;
     font-size: 500%;
     height: 25%;
-    margin-top: 5%;
+    margin-top: 4%;
     font-family: 'Great Vibes', cursive;
 }
 
-.table {
-    border: 1px solid white;
-    background-color: rgb(190, 190, 160, 0.7);
+.table-fixed {
     width: 50%;
     margin: auto;
+    margin-top: 4%;
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    
+}
+
+.table-fixed tbody{
+    height:305px;
+    overflow-y:auto;
+    width: 100%;
+}
+
+.table-fixed thead,tbody,tr,td,th{
+    display:block;
+}
+
+.table-fixed tbody td{
+    float:left;
+}
+
+.table-fixed thead tr th{
+    font-weight: bold;
+    font-size: 150%;
+    float:left;
+}
+
+.home {
+    display: flex;
+    margin-top: 5%;
+    align-items: flex-end;
+    height: 25%;
+    justify-content: space-evenly;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.btn {
+    font-weight: bold;
     font-size: 150%;
 }

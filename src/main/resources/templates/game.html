@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" th:href="@{/paper.css}" href="../static/paper.css">
    <link rel="stylesheet" th:href="@{/game.css}" href="../static/game.css">
    <link rel="stylesheet" th:href="@{/mapgrid.css}" href="../static/mapgrid.css">
    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> 
@@ -12,7 +13,7 @@
   <div class="container">
     <section class="room">
       <h1 class="room-title" th:text="${currentRoom.name}">Room</h1>
-      <ul class="room-list">
+      <ul class="room-list paper">
         <li th:each="room : ${rooms}">
           <form action="/game" method="post">
             <button th:if="${room.locked == false}" name="id" value="0" type="submit" th:value="${room.id}" th:text="${room.name}">Room</button>
@@ -22,7 +23,7 @@
       </ul>
       <img class="room-img" src="../static/hall.jpg" th:src="@{${'/' + currentRoom.name.toLowerCase() + '.jpg'}}">
       <button type="button" class="btn btn-dark room-map-button" data-toggle="modal" data-target="#map">Mansion map</button>
-      <form th:if="${end_message == 'End game'}" action="/end" method="post">
+      <form class="paper" th:if="${end_message == 'End game'}" action="/end" method="post">
         <label for="username">Enter your name</label><br>
         <input type=text name="username">
         <button name="end" type="submit" th:text="${end_message}"></button>

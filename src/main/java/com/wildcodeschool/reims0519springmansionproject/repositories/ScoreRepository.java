@@ -36,7 +36,7 @@ public class ScoreRepository {
                     int id = resultSet.getInt("id");
                     String name = resultSet.getString("name");
                     long time = resultSet.getLong("time");
-                    scores.add(new Score(id, name, time));
+                    scores.add(0, new Score(id, name, time));
                 }
                 return scores;
             }

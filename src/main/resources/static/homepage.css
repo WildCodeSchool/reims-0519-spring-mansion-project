@@ -8,15 +8,11 @@ body {
 }
 
 .title {
-    background-color: rgb(248, 245, 222, 0.6);
-    background-image: linear-gradient(to right, rgba(255,210,0,0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0,0,0,0) 35%, rgba(200, 160, 0, 0.1) 65%);
-    box-shadow: inset 0 0 75px rgba(255,210,0,0.3), inset 0 0 20px rgba(255,210,0,0.4), inset 0 0 30px rgba(220,120,0,0.8);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
     font-size: 400%;
     font-family: 'Great Vibes', cursive;
-    
     padding: 1% 1% 1% 1%;
 }
 
@@ -30,14 +26,6 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     color: black;
 
-}
-
-#text {
-    background-color: rgb(248, 245, 222, 0.8);
-    background-image: linear-gradient(to right, rgba(255,210,0,0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0,0,0,0) 35%, rgba(200, 160, 0, 0.1) 65%);
-    box-shadow: inset 0 0 75px rgba(255,210,0,0.3), inset 0 0 20px rgba(255,210,0,0.4), inset 0 0 30px rgba(220,120,0,0.8);
-    border-radius: 10px;
-    padding: 1% 1% 1% 1%;
 }
 
 .enter {

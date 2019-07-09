@@ -19,6 +19,7 @@ public class EndController{
     @GetMapping("/end")
     public String getEnd(Model model){
         model.addAttribute("scores", ScoreRepository.selectAll());
+        game.getPlayer().getScore().setInitialTime(0);
         return "endgame";
     }
 
@@ -28,7 +29,7 @@ public class EndController{
             session.setAttribute("username", username);
         }
         ScoreRepository.insert(
-            username,
+            session.getAttribute("username").toString(),
             Game.getGame().getPlayer().getScore().getEllapsedTime()
         );
         game.getPlayer().getScore().setInitialTime(0);
