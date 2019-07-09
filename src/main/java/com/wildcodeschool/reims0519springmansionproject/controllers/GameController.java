@@ -39,7 +39,7 @@ public class GameController {
             ArrayList<Object> myObjects = game.getObjects().getMyObjects();
             if (!myObjects.isEmpty()) {
                 if (id == myObjects.get(0).getIdLocation() && game.getMansion().getRoomById(myObjects.get(0).getRoomAssociated()).isLocked()) {
-                    model.addAttribute("key", "You found the key !");
+                    model.addAttribute("locked", "You found the key !");
                     game.getMansion().getRoomById(myObjects.get(0).getRoomAssociated()).setLocked(false);
                 }
             }
