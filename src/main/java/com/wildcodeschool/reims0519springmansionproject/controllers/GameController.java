@@ -2,6 +2,8 @@ package com.wildcodeschool.reims0519springmansionproject.controllers;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import com.wildcodeschool.reims0519springmansionproject.entities.Game;
 import com.wildcodeschool.reims0519springmansionproject.entities.Room;
 import org.springframework.stereotype.Controller;
@@ -21,14 +23,9 @@ public class GameController {
     }
     
     @PostMapping("/game")
-    public String postRoom(Model model, @RequestParam(defaultValue = "1") Integer id, @RequestParam(name="nickname", required=false) String nickname) {
-        if (game.getPlayer().getScore().getName() == null) {
-            if (nickname != null && !nickname.equals("")) {
-                game.getPlayer().getScore().setName(nickname);
-            }
-            else {
-                game.getPlayer().getScore().setName("AAA");
-            }
+    public String postRoom(Model model, HttpSession session, @RequestParam(defaultValue = "1") Integer id) {
+        if (id == 1 && game.getPlayer().getScore().getInitialTime() == 0) {
+            game.getPlayer().getScore().setInitialTime(System.currentTimeMillis());
         }
         if (id == 5) {
             model.addAttribute("end_message", "End game");
