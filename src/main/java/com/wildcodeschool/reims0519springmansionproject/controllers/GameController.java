@@ -22,7 +22,7 @@ public class GameController {
     }
     
     @PostMapping("/game")
-    public String postRoom(Model model, @RequestParam("btn") Integer id, @RequestParam(name="nickname", required=false) String nickname) {
+    public String postRoom(Model model, @RequestParam(defaultValue = "1") Integer id, @RequestParam(name="nickname", required=false) String nickname) {
         if (game.getPlayer().getScore().getName() == null) {
             if (nickname != null && !nickname.equals("")) {
                 game.getPlayer().getScore().setName(nickname);
@@ -52,7 +52,7 @@ public class GameController {
                 model.addAttribute("rooms", myList);
             }
         }
-        model.addAttribute("roomImage", game.getMansion().getRoomById(id).getName().toLowerCase());
+        model.addAttribute("currentRoom", game.getMansion().getRoomById(id));
         return "game";
     }
 }
