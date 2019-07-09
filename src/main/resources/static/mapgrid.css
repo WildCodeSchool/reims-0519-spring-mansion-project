@@ -1,0 +1,40 @@
+.wrapper {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    position: relative;
+    grid-template-areas:
+        "_1 _1 _2"
+        "_3 _4 _5"
+        "_6 _4 _5"
+    ;
+}
+.item {
+    border-radius: 2px;
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+.item1 {
+    grid-area: _1;
+}
+.item2 {
+    grid-area: _2;
+}
+.item3 {
+    grid-area: _3;
+}
+.item4 {
+    grid-area: _4;
+}
+.item5 {
+    grid-area: _5;
+}
+.item6 {
+    grid-area: _6;
+}

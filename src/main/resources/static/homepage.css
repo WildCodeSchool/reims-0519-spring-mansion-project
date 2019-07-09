@@ -1,0 +1,42 @@
+body {
+    background: url(yard.jpg) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    color: black;
+
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 400%;
+    font-family: 'Great Vibes', cursive;
+    padding: 1% 1% 1% 1%;
+}
+
+.history {
+    
+    display: flex;
+    align-items: flex-end;
+    height: 45%;
+    justify-content: space-around;
+    font-size: 200%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: black;
+
+}
+
+.enter {
+    display: flex;
+    align-items: flex-end;
+    height: 25%;
+    justify-content: space-evenly;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 150%;
+}

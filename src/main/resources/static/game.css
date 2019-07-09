@@ -1,0 +1,67 @@
+body{
+    margin-top: 30px;  
+}
+body::before{
+    content: "";
+    background-image: url(background.jpg);
+    filter: grayscale(50%);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+ul{
+    height: 100%;
+}
+.col-4{
+    height: 50%;
+}
+.card{
+    text-align: inherit;
+}
+.btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+img{
+    max-width:100%;
+}
+
+.room {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+}
+.room-title {
+    color: white;
+    font-size: 400%;
+    font-family: 'Great Vibes', cursive;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.room-map-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.room-img {
+    border-radius: 5px;
+
+}
+li{
+    list-style-type: none;
+}
+button{
+    border-radius: 5px;
+    border-style: none;
+    margin-bottom: 5px;
+    color:white;
+    background-color: grey;
+}
+button:hover{
+    background-color:burlywood;
+    color: black;
+}
