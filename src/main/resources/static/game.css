@@ -39,3 +39,16 @@ img{
     border-radius: 5px;
 
 }
+li{
+    list-style-type: none;
+}
+button{
+    border-radius: 5px;
+    border-style: none;
+    margin-bottom: 5px;
+    color:white;
+    background-color: grey;
+}
+button:hover{
+    background-color: burlywood;
+}
