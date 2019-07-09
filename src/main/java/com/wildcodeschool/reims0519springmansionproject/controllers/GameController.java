@@ -26,6 +26,7 @@ public class GameController {
     public String postRoom(Model model, HttpSession session, @RequestParam(defaultValue = "1") Integer id) {
         if (id == 1 && game.getPlayer().getScore().getInitialTime() == 0) {
             game.getPlayer().getScore().setInitialTime(System.currentTimeMillis());
+            game.getMansion().getRoomById(5).setLocked(true);
         }
         if (id == 5) {
             model.addAttribute("end_message", "End game");
