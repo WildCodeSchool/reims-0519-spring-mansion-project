@@ -15,6 +15,7 @@ body{
 img{
     max-width:100%;
 }
+
 .room {
     width: 100%;
     display: grid;
@@ -36,4 +37,5 @@ img{
 }
 .room-img {
     border-radius: 5px;
+
 }
